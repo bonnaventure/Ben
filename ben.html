@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Ben are You?</title>
+    <style>
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .slideshow-container h1 {
+            text-align: center;
+            font-size: 2em;
+            margin: 0;
+            padding: 20px;
+            
+        }
+        .slide {
+            display: none;
+            text-align: center;
+           
+        }
+        .slide img {
+            width: auto;
+            max-height: 245px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: 10em;
+            padding: 16px;
+            margin-top: -22px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 48px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+     
+
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <h1>Which Ben Affleck are You?</h1>
+    <div class="slide">
+        <img src="img/ben-beach.jpg" alt="Ben at the Beach">
+        <div class="text">Stoic, salty, and staring at the ocean. You take moments for yourself to contemplate the mysteries of life.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-bush-cig.jpg" alt="Ben with a Cigarette by the Bush">
+        <div class="text">Stoic, stealth and self-indulgent. You take time for self care, but hide your bad habits from your family.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-cig-newspaper.jpg" alt="Ben with a Cigarette and Newspaper">
+        <div class="text">Comfy, casual, and caffeinated. Life demands balance, and you stay informed while taking a moment for your guilty pleasures.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-cig.png" alt="Ben Smoking a Cigarette">
+        <div class="text">Likable, loyal, and legendary. Despite your challenges, you remain a pillar of the community that continues to excel in your field.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-dunkin-bite.jpg" alt="Ben Biting Dunkin Donuts">
+        <div class="text">Industrious, influential, intelligent. Your "can do" attitude and penchant for following the rules sets a great example for those around you.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-dunkin.jpg" alt="Ben with Dunkin Donuts">
+        <div class="text">Motivated, mindful, and maximal. Never forgetting your roots, you know what you want, and you get it (even if it's a lot to handle).</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-incognito-reading.jpg" alt="Ben Incognito Reading">
+        <div class="text">Dynamic, dependable, discreet. As comfortable in a hoodie as you are on the red carpet, you hone your mind like a weapon.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ben-reading-hp.jpg" alt="Ben Reading Harry Potter">
+        <div class="text">Playful, pure, unpretentious. Your spirit is unblemished by prentention, and your child-like whimsy keeps you grounded.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/bennifer2.jpg" alt="Bennifer">
+        <div class="text">Passionate, provocative, and positive. Despite previous failure, you allow your heart to guide you to your people.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/ice-cream-cone.jpg" alt="Ben with Ice Cream Cone">
+        <div class="text">Vibrant, visionary, voracious. The only thing that matches your dreams, is the hunger you have to acheive them. </div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/sleepy-ben.jpg" alt="Sleepy Ben">
+        <div class="text">Rested, resilient, and remarkable. "Rest is best" is your motto, and your self-care routine ensures you are always at your best.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/three-bens.jpg" alt="Three Bens">
+        <div class="text">Contemplative, calm, and capable. You take the time evaluate the situation before diving in, making you steady in crisis.</div>
+        <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+</div>
+
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>
