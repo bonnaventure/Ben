@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Ben are You?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #333;
+            --bg-color: #f4f4f9;
+            --card-bg: #ffffff;
+            --text-muted: #555;
+            --accent-color: #007bff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .slideshow-container {
+            max-width: 700px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slideshow-container h1 {
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: 800;
+            margin: 0;
+            padding: 24px 20px;
+            background: var(--card-bg);
+            border-bottom: 1px solid #eee;
+        }
+
+        .slide {
+            display: none;
+            padding: 30px 20px;
+            text-align: center;
+            animation: fade 0.5s ease-in-out;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .text {
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: var(--text-muted);
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Navigation Arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            user-select: none;
+            text-decoration: none;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .prev { left: 15px; }
+        .next { right: 15px; }
+
+        /* Dots */
+        .dot-container {
+            text-align: center;
+            padding: 15px 20px 25px;
+            background: var(--card-bg);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: var(--accent-color);
+            transform: scale(1.3);
+        }
+
+        /* Animations */
+        @keyframes fade {
+            from { opacity: 0.4; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .image-wrapper { height: 250px; }
+            .slideshow-container h1 { font-size: 1.5em; }
+            .text { font-size: 1em; max-width: 90%; }
+            .prev, .next { width: 36px; height: 36px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <h1>Which Ben Affleck are You?</h1>
+    
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-beach.jpg" alt="Ben at the Beach"></div>
+        <div class="text">Stoic, salty, and staring at the ocean. You take moments for yourself to contemplate the mysteries of life.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-bush-cig.jpg" alt="Ben with a Cigarette by the Bush"></div>
+        <div class="text">Stoic, stealth and self-indulgent. You take time for self care, but hide your bad habits from your family.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-cig-newspaper.jpg" alt="Ben with a Cigarette and Newspaper"></div>
+        <div class="text">Comfy, casual, and caffeinated. Life demands balance, and you stay informed while taking a moment for your guilty pleasures.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-cig.png" alt="Ben Smoking a Cigarette"></div>
+        <div class="text">Likable, loyal, and legendary. Despite your challenges, you remain a pillar of the community that continues to excel in your field.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-dunkin-bite.jpg" alt="Ben Biting Dunkin Donuts"></div>
+        <div class="text">Industrious, influential, intelligent. Your "can do" attitude and penchant for following the rules sets a great example for those around you.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-dunkin.jpg" alt="Ben with Dunkin Donuts"></div>
+        <div class="text">Motivated, mindful, and maximal. Never forgetting your roots, you know what you want, and you get it (even if it's a lot to handle).</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-incognito-reading.jpg" alt="Ben Incognito Reading"></div>
+        <div class="text">Dynamic, dependable, discreet. As comfortable in a hoodie as you are on the red carpet, you hone your mind like a weapon.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ben-reading-hp.jpg" alt="Ben Reading Harry Potter"></div>
+        <div class="text">Playful, pure, unpretentious. Your spirit is unblemished by prentention, and your child-like whimsy keeps you grounded.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/bennifer2.jpg" alt="Bennifer"></div>
+        <div class="text">Passionate, provocative, and positive. Despite previous failure, you allow your heart to guide you to your people.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/ice-cream-cone.jpg" alt="Ben with Ice Cream Cone"></div>
+        <div class="text">Vibrant, visionary, voracious. The only thing that matches your dreams, is the hunger you have to acheive them.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/sleepy-ben.jpg" alt="Sleepy Ben"></div>
+        <div class="text">Rested, resilient, and remarkable. "Rest is best" is your motto, and your self-care routine ensures you are always at your best.</div>
+    </div>
+    <div class="slide">
+        <div class="image-wrapper"><img src="img/three-bens.jpg" alt="Three Bens"></div>
+        <div class="text">Contemplative, calm, and capable. You take the time evaluate the situation before diving in, making you steady in crisis.</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+        <span class="dot" onclick="currentSlide(12)"></span>
+    </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>
